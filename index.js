@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const express = require('express');
 const cors = require('cors');
-const { mungeLocation, mungeWeather } = require('./utils.js');
+const { mungeLocation, mungeWeather, mungeTrails } = require('./utils.js');
 
 const request = require('superagent');
 
@@ -43,7 +43,20 @@ app.get('/weather', async(req, res) => {
             e,
         });
     }
-    
+});
+
+app.get('/trails', async(req, res) => {
+    try {
+        const data = await request.get(`https://www.hikingproject.com/data/get-trails?lat=${req.query.latitude}&lon=${req.query.longitude}&key=${process.env.HIKINGPROJECT_KEY}`);
+        const mungedData = mungeTrails(data.body);
+        res.json(mungedData);
+    } catch (e) {
+        res.json({
+            status: 500,
+            responseText: 'Something went wrong',
+            e,
+        });
+    }
 });
 
 app.get('/', (req, res) => {

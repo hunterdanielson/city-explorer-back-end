@@ -26,8 +26,23 @@ function mungeWeather(weatherData) {
         return [{}];
     }
 }
+function mungeTrails(trailData) {
+    try {
+        const transformedData = trailData.trails.map((hike) => {
+            
+            return {
+                picture: hike.imgMedium
+            };
+        });
+
+        return transformedData.slice(0, 1);
+    } catch (e) {
+        return [{}];
+    }
+}
 
 module.exports = {
     mungeLocation,
     mungeWeather,
+    mungeTrails
 };
