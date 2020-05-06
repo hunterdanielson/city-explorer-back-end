@@ -38,7 +38,7 @@ function mungeTrails(trailData) {
             };
         });
 
-        return transformedData.slice(0, 1);
+        return transformedData.slice(0, 5);
     } catch (e) {
         return [{}];
     }
