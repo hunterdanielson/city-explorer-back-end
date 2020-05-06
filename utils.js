@@ -31,6 +31,9 @@ function mungeTrails(trailData) {
         const transformedData = trailData.trails.map((hike) => {
             
             return {
+                name: hike.name,
+                summary: hike.summary,
+                difficulty: hike.difficulty,
                 picture: hike.imgMedium
             };
         });
