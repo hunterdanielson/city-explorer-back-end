@@ -40,9 +40,9 @@ function mungeTrails(trailData) {
                 stars: hike.stars,
                 starVotes: hike.starVotes,
                 summary: hike.summary,
-                // conditionStatus: hike.conditionStatus,
-                // difficulty: hike.difficulty,
-                // picture: hike.imgMedium
+                conditionStatus: hike.conditionStatus,
+                difficulty: hike.difficulty,
+                picture: hike.imgMedium
             };
         });
 
