@@ -38,7 +38,7 @@ function mungeTrails(trailData) {
                 length: hike.length,
                 conditionStatus: hike.conditionStatus,
                 stars: hike.stars,
-                starVotes: hike.starVotes,
+                votes: hike.starVotes,
                 difficulty: hike.difficulty,
                 picture: hike.imgMedium
             };
