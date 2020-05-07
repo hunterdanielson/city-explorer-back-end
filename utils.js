@@ -35,7 +35,7 @@ function mungeTrails(trailData) {
                 summary: hike.summary,
                 url: hike.url,
                 location: hike.location,
-                distance: hike.length,
+                length: hike.length,
                 conditionStatus: hike.conditionStatus,
                 stars: hike.stars,
                 starVotes: hike.starVotes,
