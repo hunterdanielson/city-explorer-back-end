@@ -28,21 +28,21 @@ function mungeWeather(weatherData) {
 }
 function mungeTrails(trailData) {
     try {
-        const transformedData = trailData.trails.map((trails) => {
+        const transformedData = trailData.trails.map((hike) => {
             
             return {
-                name: trails.name,
-                summary: trails.summary,
-                url: trails.url,
-                location: trails.location,
-                length: trails.length,
-                conditionStatus: trails.conditionStatus,
-                stars: trails.stars,
-                starVotes: trails.starVotes,
-                difficulty: trails.difficulty,
-                picture: trails.imgMedium,
-                conditionDetails: trails.conditionDetails,
-                conditionDate: trails.conditionDate
+                name: hike.name,
+                url: hike.url,
+                location: hike.location,
+                length: hike.length,
+                conditionDate: hike.conditionDate,
+                conditionDetails: hike.conditionDetails,
+                stars: hike.stars,
+                starVotes: hike.starVotes,
+                summary: hike.summary,
+                // conditionStatus: hike.conditionStatus,
+                // difficulty: hike.difficulty,
+                // picture: hike.imgMedium
             };
         });
 
