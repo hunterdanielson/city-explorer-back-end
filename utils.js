@@ -21,7 +21,7 @@ function mungeWeather(weatherData) {
             };
         });
 
-        return transformedData.slice(0, 3);
+        return transformedData.slice(0, 8);
     } catch (e) {
         return [{}];
     }
@@ -33,6 +33,12 @@ function mungeTrails(trailData) {
             return {
                 name: hike.name,
                 summary: hike.summary,
+                url: hike.url,
+                location: hike.location,
+                distance: hike.length,
+                conditionStatus: hike.conditionStatus,
+                stars: hike.stars,
+                starVotes: hike.starVotes,
                 difficulty: hike.difficulty,
                 picture: hike.imgMedium
             };
